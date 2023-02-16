@@ -1,0 +1,10 @@
+chromedriver
+clion
+clion-cmake
+clion-gdb
+clion-jre
+clion-lldb
+google-chrome
+nvim-packer-git
+webstorm
+xxh-git
