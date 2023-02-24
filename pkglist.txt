@@ -18,5 +18,3 @@ ttf-nerd-fonts-symbols-common
 valgrind
 vim
 zsh
-zsh-autosuggestions
-zsh-syntax-highlighting

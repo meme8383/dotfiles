@@ -205,7 +205,7 @@ local plugins = {
   },
 
   ["catppuccin/nvim"] = {
-    as = "catppuccin"
+    name = "catppuccin"
   }
 }
 

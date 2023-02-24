@@ -98,6 +98,8 @@ else
   export EDITOR='nvim'
 fi
 
+export BROWSER='google-chrome-stable'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
