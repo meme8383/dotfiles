@@ -11,7 +11,14 @@ alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias ececomp='xxh $USER@ececomp.ecn.purdue.edu +s zsh +hh "~"'
 
-alias rpi='f() { ssh team_52@192.168.52.$1:~ };f'
+rpi() {
+  if [ -n "$1" ]
+  then
+    ssh team_52@192.168.52.$1
+  else
+    ssh team_52@192.168.52.1
+  fi
+}
 
 alias gcc='gcc -std=c99 -g -Wall -Wshadow -pedantic -Wvla -Werror'
 alias valgrind='valgrind --tool=memcheck --leak-check=full --verbose'

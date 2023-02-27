@@ -316,8 +316,8 @@ set $ws10 "10"
 
 # bind program to workspace and focus to them on startup:
 #assign [class="kitty"] $ws1
-assign [class="(?i)google-chrome-stable"] $ws2
-assign [class="Clion"] $ws3
+assign [class="google-chrome"] $ws2
+assign [class="jetbrains-clion"] $ws3
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=kitty] focus
@@ -580,4 +580,4 @@ bindsym $mod+t exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 # Set touchpad natural scrolling
-exec --no-startup-id xinput set-prop 20 311 1
+exec --no-startup-id xinput set-prop 'ASUE1209:00 04F3:319F Touchpad' 311 1

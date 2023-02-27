@@ -3,7 +3,7 @@
  * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
-    font:            "Noto Sans Regular 10";
+    font:            "JetBrainsMono Nerd Font 12";
     show-icons:      false;
     icon-theme:      "Qogir";
     scroll-method:   0;
@@ -11,18 +11,21 @@ configuration {
     sidebar-mode:    false;
 }
 
-@import "~/.config/rofi/arc_dark_transparent_colors.rasi"
+/*@import "~/.config/rofi/arc_dark_transparent_colors.rasi"*/
+@theme "catppuccin"
 
 window {
-    background-color: @background;
-    border:           0;
-    padding:          10;
+    background-color: @bg-col;
+    border-color: @border-col;
+    border:           3px;
+    padding:          5px;
     transparency:     "real";
-    width:            120px;
+    width:            140px;
     location:         east;
     /*y-offset:       18;*/
     /*x-offset:       850;*/
 }
+
 listview {
     lines:     7;
     columns:   1;
@@ -37,76 +40,76 @@ element-text {
     text-color:       inherit;
 }
 element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+    background-color: @bg-col;
+    text-color:       @fg-col;
 }
 element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
+    background-color: @bg-col;
+    text-color:       @fg-col;
 }
 element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
+    background-color: @bg-col;
+    text-color:       @fg-col;
 }
 element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @bg-col-light;
+    text-color:       @blue;
 }
 element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
+    background-color: @bg-col-light;
+    text-color:       @blue;
 }
 element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
+    background-color: @bg-col-light;
+    text-color:       @blue;
 }
 element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+    background-color: @bg-col-light;
+    text-color:       @fg-col;
 }
 element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
+    background-color: @bg-col-light;
+    text-color:       @fg-col;
 }
 element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
+    background-color: @bg-col-light;
+    text-color:       @fg-col;
 }
 scrollbar {
     width:        4px;
     border:       0;
-    handle-color: @normal-foreground;
+    handle-color: @fg-col;
     handle-width: 8px;
     padding:      0;
 }
 mode-switcher {
     border:       2px 0px 0px;
-    border-color: @separatorcolor;
+    border-color: @border-col;
 }
 button {
     spacing:    0;
-    text-color: @normal-foreground;
+    background-color: @bg-col-light;
 }
 button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @bg-col-light;
+    text-color:       @blue;
 }
 inputbar {
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @fg-col;
     padding:    1px;
 }
 case-indicator {
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @fg-col;
 }
 entry {
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @fg-col;
 }
 prompt {
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @fg-col;
 }
 inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
@@ -115,7 +118,7 @@ textbox-prompt-colon {
     expand:     false;
     str:        ":";
     margin:     0px 0.3em 0em 0em;
-    text-color: @normal-foreground;
+    text-color: @fg-col;
 }
 
 /*removes the text input line*/
