@@ -206,6 +206,13 @@ local plugins = {
 
   ["catppuccin/nvim"] = {
     name = "catppuccin"
+  },
+
+  ["lervag/vimtex"] = {
+    name = "vimtex",
+    config = function()
+      require "plugins.configs.vimtex"
+    end
   }
 }
 
