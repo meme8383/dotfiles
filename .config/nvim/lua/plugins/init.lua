@@ -203,17 +203,6 @@ local plugins = {
       require("core.utils").load_mappings "whichkey"
     end,
   },
-
-  ["catppuccin/nvim"] = {
-    name = "catppuccin"
-  },
-
-  ["lervag/vimtex"] = {
-    name = "vimtex",
-    config = function()
-      require "plugins.configs.vimtex"
-    end
-  }
 }
 
 -- Load all plugins
