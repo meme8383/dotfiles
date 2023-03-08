@@ -594,4 +594,4 @@ bindsym $mod+t exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 # Set touchpad natural scrolling
-exec --no-startup-id xinput set-prop 'ASUE1209:00 04F3:319F Touchpad' 311 1
+exec --no-startup-id xinput set-prop 'ASUE1209:00 04F3:319F Touchpad' 'libinput Natural Scrolling Enabled' 1
