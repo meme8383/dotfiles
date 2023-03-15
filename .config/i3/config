@@ -360,11 +360,12 @@ for_window [class=(?i)google-chrome-stable] focus
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
-exec_always --no-startup-id picom --config  ~/.config/picom.conf
+exec_always --no-startup-id picom --config  ~/.config/picom.conf --shadow-exclude "! name~=''" --blur-background-exclude  "! name~=''" &
 
 #exec_always --no-startup-id ~/.config/picom/picom-launch.sh
 #exec_always --no-startup-id polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id conky &
 
 #############################################
 # autostart applications/services on login: #
