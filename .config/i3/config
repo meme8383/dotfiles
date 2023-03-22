@@ -293,7 +293,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/google-chrome-stable
 bindsym $mod+n exec /usr/bin/thunar
-bindsym $mod+Shift+s --release exec scrot -s ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png -e 'xclip -selection clipboard -t image/png -i $f && notify-send "Screenshot saved to $f"'
+bindsym $mod+Shift+s --release exec scrot -f -s ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png -e 'xclip -selection clipboard -t image/png -i $f && notify-send "Screenshot saved to $f"'
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
@@ -469,6 +469,7 @@ for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="gnome-calendar"] floating enable
 
 # set border of floating window
 for_window [class="urxvt"] border pixel 1
