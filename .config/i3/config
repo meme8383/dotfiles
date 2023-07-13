@@ -364,7 +364,6 @@ exec_always --no-startup-id picom --config  ~/.config/picom.conf --shadow-exclud
 
 #exec_always --no-startup-id ~/.config/picom/picom-launch.sh
 #exec_always --no-startup-id polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id ~/.config/conky/Mimosa_DBlue/start.sh
 
 #############################################
@@ -397,10 +396,12 @@ exec --no-startup-id dex --autostart --environment i3
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 #exec --no-startup-id ~/.screenlayout/monitor.sh
+exec --no-startup-id xrandr --output DP-1-0 --mode "2560x1440" --rate 143.91 --primary --left-of eDP1 --scale 1x1
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/evening-sky.png
+exec_always --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/evening-sky.png
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600

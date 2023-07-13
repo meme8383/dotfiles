@@ -7,4 +7,6 @@ killall -q polybar
 sleep 1
 
 # Launch polybar
-polybar
+for m in $(polybar --list-monitors| cut -d":" -f1); do 
+  MONITOR=$m polybar &
+done
