@@ -364,7 +364,7 @@ exec_always --no-startup-id picom --config  ~/.config/picom.conf --shadow-exclud
 
 #exec_always --no-startup-id ~/.config/picom/picom-launch.sh
 #exec_always --no-startup-id polybar
-exec --no-startup-id ~/.config/conky/Mimosa_DBlue/start.sh
+#exec --no-startup-id ~/.config/conky/Mimosa_DBlue/start.sh
 
 #############################################
 # autostart applications/services on login: #
@@ -400,7 +400,7 @@ exec --no-startup-id xrandr --output DP-1-0 --mode "2560x1440" --rate 143.91 --p
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec_always --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/evening-sky.png
+exec_always --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/ign_chainsaw-man.png
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # set powersavings for display:
